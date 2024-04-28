@@ -1,0 +1,97 @@
+import java.util.Random;
+import java.util.Scanner;//TIP To <b>Run</b> code, press <shortcut actionId="Run"/> or
+// click the <icon src="AllIcons.Actions.Execute"/> icon in the gutter.
+public class Main {
+    public static void main(String[] args) {
+
+        //1.Soru Kullanıcıdan alınan sayının tek mi çift mi olduğunu bulan ve ekrana yazdıran java kodunu yazınız.
+        /*Scanner scanner=new Scanner(System.in);
+        System.out.println("Bir sayı girin: ");
+        int s1=scanner.nextInt();
+
+        //Sayının tek mi çift mi olduğunu kontrol et ve ekrana yazdır.
+        if (s1%2==0){
+            System.out.println(s1+" çifttir.");
+        } else {
+            System.out.println(s1+" tektir.");
+        }*/
+
+
+
+
+
+
+        //2.soru Kullanıcıdan alınan sayının faktöriyelini bulan ve ekrana yazdıran java kodu yazınız.
+        /*Scanner scanner=new Scanner(System.in);
+        System.out.print("Bir sayı girin: ");
+        int s2=scanner.nextInt();
+
+        //Faktöriyel hesaplama işlemi
+        //faktöriyelin değişkeninin 1 ile başlama sebebi, faktöriyel hesaplamasının başlangıç değerini 1 olarak belirlemektir. Faktöriyel değişkeninde sayılar toplanır.
+        //Faktöriyel bir sayının 1'den kendisine kadar olan tüm tam sayıların çarpımıdır.
+        int faktoriyel=1;
+        for (int i=1; i<=s2;i++){
+            faktoriyel*=i;
+        }
+        System.out.println((5+"!="+faktoriyel));*/
+
+
+
+
+
+
+        //3.Soru
+        int grade = 84;
+        int nextMultiple;
+        if(grade < 38) {
+            System.out.println("grade : " + grade + " failed.");
+        }else {
+            // nextMultiple = findNextMultipleOfFive(grade);
+            nextMultiple = findNextMultipleOfFiveNew(grade);
+            if(nextMultiple - grade < 3) {
+                grade = nextMultiple;
+            }
+            System.out.println("student's grade is : " + grade);
+        }
+    }
+
+    public static int findNextMultipleOfFive(int grade) {
+        int nextMultiple = 0;
+        for (int i = 5; i <= 100; i += 5) {
+            if(i > grade)  {
+                nextMultiple = i;
+                System.out.println("next multiple : " + i);
+                break;
+            }
+        }
+        return nextMultiple;
+    }
+    public static int findNextMultipleOfFiveNew(int grade) {
+        return ((grade / 5) + 1) * 5;
+
+
+
+
+
+
+
+        //4.Soru Random sınıfını kullanarak;
+        //zar atılacak 6 - 5 geldiğinde kaçıncı atışta 6-5 geldiğini yazıp uygulama kapanacak.
+        /*Random random = new Random();
+        int denemeSayisi=0;
+        int zar1,zar2;
+
+        while(true) {
+            zar1 = random.nextInt(6) + 1;
+            zar2 = random.nextInt(6) + 1;
+            denemeSayisi++;
+
+            System.out.println("Zarlar: " + zar1 + "-" + zar2);
+
+            if (zar1 == 6 && zar2 == 5) {
+                System.out.println("6-5 geldi! " + denemeSayisi + ". denemede.");
+                break;
+            }
+        }*/
+    }
+}
